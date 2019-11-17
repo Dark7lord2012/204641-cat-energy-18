@@ -21,18 +21,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("copy", function () {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
-});
-
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -46,4 +34,4 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "copy", "server"));
+gulp.task("start", gulp.series("css", "server"));
