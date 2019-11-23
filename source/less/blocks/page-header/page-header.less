@@ -1,5 +1,13 @@
 
 .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
+  min-height: 40px;
+  padding: 10px 0;
+
   background-color: #ffffff;
   color: #000000;
   font-family: "Oswald", "Arial", sans-serif;
@@ -7,4 +15,52 @@
   line-height: 20px;
   font-weight: bold;
   border: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    min-height: 85px;
+    align-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+    border: 1px dashed orange;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  border: 1px solid green;
+  height: 40px;
+  margin-left: 15px;
+  @media (min-width: @tablet-width) {
+    margin-right: 45px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-left: 0;
+  }
+}
+
+.page-header__toggle {
+  border: 1px solid green;
+  width: 25px;
+  font-size: 10px; /* времено, чтобы убрать многострочность в кнопке*/
+  margin-right: 15px;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__main-nav {
+  /*display: none;*/
+  display: flex;
+  border: 1px solid green;
+  padding: 5px;
+  @media (min-width: @tablet-width) {
+    min-width: 405px;
+    margin-right: 20px;
+  }
 }

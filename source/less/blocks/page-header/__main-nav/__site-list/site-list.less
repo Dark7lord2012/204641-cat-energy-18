@@ -1,11 +1,17 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
   text-align: center;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .site-list__item {
-  border-top: 2px solid #e9e9e9;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  border: 1px solid blue;
+  padding: 20px 0;
 }
