@@ -5,9 +5,9 @@
   justify-content: space-between;
   width: 320px;
   margin: 0 auto;
-  min-height: 40px;
+  min-height: 45px;
   padding: 10px 0;
-
+  box-sizing: border-box;
   background-color: #ffffff;
   color: #000000;
   font-family: "Oswald", "Arial", sans-serif;
@@ -15,16 +15,15 @@
   line-height: 20px;
   font-weight: bold;
   border: 1px solid red;
-
   @media (min-width: @tablet-width) {
     min-width: 768px;
     min-height: 85px;
     align-content: flex-end;
   }
-
   @media (min-width: @desktop-width) {
+    min-height: 142px;
     min-width: 1440px;
-    border: 1px solid red;
+    padding: 0 110px;
     margin: 0 auto;
     justify-content: space-between;
   }
@@ -55,11 +54,14 @@
 }
 
 .page-header__main-nav {
-  /*display: none;*/
   display: flex;
+  flex-direction: column;
+  /*display: none; временно, чтобы совпадал макет без меню*/
   border: 1px solid green;
-  padding: 5px;
+    padding: 5px;
+    flex-grow: 1;
   @media (min-width: @tablet-width) {
+    flex-grow: 0;
     min-width: 405px;
     margin-right: 20px;
   }

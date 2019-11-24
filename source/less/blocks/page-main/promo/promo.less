@@ -1,21 +1,66 @@
 
 .promo {
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center center #6bb942;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top #ffffff;
+  background-size:contain;
   font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   color: #ffffff;
+  border: 1px solid red;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 30px 120px;
+    background: none;
+    color: #111111;
+    align-content: flex-end;
+    text-align: left;
+    min-height: 809px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
+  }
 }
 
 .promo__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
+  margin-top: 7px;
+  margin-bottom: 12px;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 33px;
+  }
 }
 
 .promo__slogan {
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+  margin-bottom: 0px;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -50px;
+    order: 4;
+    z-index: 0;
+  }
 }
 
 .promo__link-btn {
@@ -23,7 +68,15 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  border: 1px solid red;
   text-decoration: none;
-  padding: 15px;
+  padding: 11px 0;
+  background-color: #68b738;
+  text-transform: uppercase;
+  text-align: center;
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 1;
+  }
 }
