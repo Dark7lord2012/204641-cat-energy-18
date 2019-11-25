@@ -1,6 +1,18 @@
 
 .products {
-  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .products__title {
@@ -8,9 +20,17 @@
   color: #111111;
   font-size: 36px;
   line-height: 60px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .products__list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
