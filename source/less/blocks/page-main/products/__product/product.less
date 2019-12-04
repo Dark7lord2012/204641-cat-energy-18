@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 25px 0;
+  padding: 25px 20px;
   outline: 1px solid green;
   box-sizing: border-box;
   margin-bottom: 5px;
@@ -12,6 +12,8 @@
   @media (min-width: @tablet-width) {
     flex-basis: 324px;
     margin-bottom: 60px;
+    padding: 40px;
+    background-color: #f2f2f2; /* !!! */
   }
 
   @media (min-width: @desktop-width) {
@@ -28,7 +30,7 @@
 
 .product:nth-child(4n) {
   @media (min-width: @desktop-width) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
