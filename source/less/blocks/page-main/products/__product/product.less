@@ -6,20 +6,30 @@
   padding: 25px 0;
   outline: 1px solid green;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  flex-grow: 0;
 
   @media (min-width: @tablet-width) {
-    flex-direction: column;
-    width: 50%;
+    flex-basis: 324px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    flex-basis: 245px;
+    margin-right: 80px;
   }
 }
 
-.product + .product {
-  border-top: 2px solid #ededed;
+.product:nth-child(2n - 1) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.product:nth-child(4n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 0px;
+  }
 }
 
 .product__image {
