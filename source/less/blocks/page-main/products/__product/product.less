@@ -25,7 +25,19 @@
 .product__image {
   outline: 1px solid blue;
   width: 50%;
-  order: -1;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.product__info {
+  width: 50%;
+  outline: 2px solid green;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .product__title {
@@ -39,10 +51,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    text-align: center;
   }
 }
 
 .product__characreristics {
+  width: 100%;
   outline: 1px solid blue;
   font-family: "Arial", sans-serif;
   color: #444444;
@@ -55,6 +69,7 @@
 }
 
 .product__link-btn {
+  width: 100%;
   outline: 1px solid blue;
   display: block;
   padding: 12px 0;
