@@ -2,7 +2,7 @@
 .promo {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: @mobile-width;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 20px;
@@ -14,7 +14,7 @@
   outline: 1px solid red;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: @tablet-width;
     padding: 30px 120px;
     background: none;
     color: #111111;
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    width: @desktop-width;
     min-height: 470px;
     padding: 74px 190px 10px;
     background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;

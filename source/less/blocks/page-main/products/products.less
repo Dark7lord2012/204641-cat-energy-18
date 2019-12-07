@@ -1,19 +1,19 @@
 
 .products {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0;
   outline: 1px solid red;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: @tablet-width;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 0 110px;
+    width: @desktop-width;
+    padding: 0 40px;
   }
 }
 
