@@ -1,17 +1,50 @@
 .programs {
-  padding: 20px;
+  display: flex;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 55px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 70px 110px;
+  }
 }
 
 .programs__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .programs__item {
-  margin: 10px;
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 42px 53px;
+  }
 }
 
 .programs__item + .programs__item {
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 80px;
+    flex-wrap: wrap;
+  }
 }

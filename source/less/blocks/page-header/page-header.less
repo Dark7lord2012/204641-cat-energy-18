@@ -1,10 +1,72 @@
 
 .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
+  min-height: 45px;
+  padding: 10px 0;
+  box-sizing: border-box;
   background-color: #ffffff;
   color: #000000;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
-  border: 1px solid red;
+  outline: 1px solid red;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    min-height: 85px;
+    align-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 142px;
+    min-width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  outline: 1px solid green;
+  height: 40px;
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 45px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.page-header__toggle {
+  outline: 1px solid green;
+  width: 25px;
+  font-size: 10px; /* времено, чтобы убрать многострочность в кнопке*/
+  margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__main-nav {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid green;
+  padding: 5px;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    min-width: 405px;
+    margin-right: 20px;
+  }
 }

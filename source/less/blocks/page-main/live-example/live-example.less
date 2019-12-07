@@ -1,6 +1,18 @@
 .live-example {
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  outline: 1px solid red;
   background-color: #f2f2f2;
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .live-example__title {
@@ -8,6 +20,14 @@
   color: #111111;
   font-size: 36px;
   line-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    /* Тут заголовок чудесным образом вылезает над блоком*/
+  }
 }
 
 .live-example__description {
@@ -15,6 +35,11 @@
   color: #444444;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .live-example__costs {
@@ -24,4 +49,8 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }

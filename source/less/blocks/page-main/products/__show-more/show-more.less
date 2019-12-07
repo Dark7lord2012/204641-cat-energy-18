@@ -1,9 +1,16 @@
 
 .show-more {
-  padding: 20px;
+  box-sizing: border-box;
+  outline: 1px solid green;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 245px;
+  }
 }
 
 .show-more__title {
+  margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   font-size: 16px;
@@ -19,10 +26,11 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .show-more__btn {
-  /* Don't worked*/
+  width: 100%;
   font-family: "Oswald", "Arial", sans-serif;
   color: #444444;
   font-size: 16px;
@@ -30,5 +38,5 @@
   border: none;
   background-color: #f2f2f2;
   text-transform: uppercase;
-  padding: 15px 60px;
+  padding: 12px 0;
 }
