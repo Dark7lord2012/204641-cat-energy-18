@@ -1,29 +1,99 @@
 
 .extra-product {
-  padding: 20px 0;
+  /*outline: 1px solid blue;*/
+  padding: 15px 0;
+  border-top: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 30px 40px 40px;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.extra-product:last-child {
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .extra-product__title {
+  margin-top: 0;
   font-family: "Oswald", "Arial", sans-serif;
   color: #222222;
   font-size: 16px;
   line-height: 16px;
+  font-weight: normal;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+  }
 }
 
 .extra-product__price {
+  min-width: 100%;
   font-family: "Arial", sans-serif;
   color: #444444;
   font-size: 14px;
   line-height: 14px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 285px;
+  }
+}
+
+.extra-product__price td:nth-child(2n) {
+  width: 95px;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
+.extra-product__price td {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    text-align: right;
+  }
 }
 
 .extra-product__link-button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
   font-family: "Oswald", "Arial", sans-serif;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
-  background-color: #68b738;
   text-decoration: none;
+  background-color: #68b738;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }

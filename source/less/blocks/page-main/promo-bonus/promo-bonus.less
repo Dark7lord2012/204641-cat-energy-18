@@ -1,16 +1,29 @@
 .promo-bonus {
   display: block;
-  min-height: 300px;
+  box-sizing: border-box;
+  min-height: 290px;
   background: #68b738 url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
   background-size: cover;
-  padding: 60px;
+  padding: 40px 60px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 290px;
+    width: 245px;
+    margin-left: auto;
+  }
 }
 
 .promo-bonus__description {
+  box-sizing: border-box;
   font-family: "Arial", sans-serif;
   color: #ffffff;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   text-align: center;
-  margin-top: 190px;
+  margin-top: 150px;
+  margin-bottom: 0;
 }
