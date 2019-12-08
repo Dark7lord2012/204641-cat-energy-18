@@ -1,19 +1,19 @@
 
 .principles {
-  width: 320px;
+  width: @mobile-width;
   box-sizing: border-box;
   margin: 10px auto;
   padding: 5px 20px;
   outline: 1px solid red;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: @tablet-width;
     padding: 5px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 5px 110px;
+    width: @desktop-width;
+    padding: 5px 40px;
   }
 }
 
