@@ -1,13 +1,33 @@
 .program-form {
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.program-form__fieldset {
+  flex-grow: 1;
+  border: none;
+  outline: 1px solid green;
+  margin: 5px;
 }
 
 .program-form__legend {
+  width: 100%;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .program-form__label {
@@ -19,7 +39,71 @@
   text-transform: uppercase;
 }
 
+.program-form__personal-data {
+  outline: 1px solid aqua;
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
+.program-form__type-program {
+  outline: 1px solid aqua;
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
+.program-form__contact-data {
+  outline: 1px solid aqua;
+  display: flex;
+  width: 100%;
+
+  .program-form__fieldset {
+    flex-grow: 1;
+  }
+}
+
+.program-form__comment {
+  outline: 1px solid aqua;
+  width: 100%;
+}
+
+
+
+.program-form__extra-options {
+  border: 1px solid #cdcdcd;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+
+  .program-form__label {
+    outline: 1px solid red;
+  }
+
+  @media (min-width: @tablet-width) {
+    .program-form__label {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .program-form__label {
+      width: 25%;
+    }
+  }
+}
+
+.program-form__extra-options .program-form__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .program-form__button-submit {
+  width: 100%;
   font-family: "Oswald", "Arial", sans-serif;
   color: #ffffff;
   background-color: #68b738;
@@ -28,7 +112,15 @@
   line-height: 20px;
   font-weight: normal;
   text-transform: uppercase;
-  padding: 15px 45px;
+  padding: 10px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+  }
+}
+
+.program-form__input-text {
+  /*Придумать так, чтобы поле тянулось */
 }
 
 .program-form__input-text,
@@ -40,4 +132,18 @@
   font-weight: normal;
   text-transform: uppercase;
   padding: 10px;
+}
+
+.program-form__note {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: 324px;
+  }
 }

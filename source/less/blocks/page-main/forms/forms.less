@@ -1,12 +1,44 @@
 .forms {
+  outline: 1px solid red;
+  box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 0 40px;
+  }
+}
+
+.forms__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 60px;
+  color: #111111;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .forms__instruction {
+  margin-bottom: 40px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
-  margin-bottom: 40px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
