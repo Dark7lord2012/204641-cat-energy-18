@@ -70,14 +70,16 @@
           <div class="program-form__contact-data">
             <fieldset class="program-form__fieldset">
               <legend class="program-form__legend">Контактные данные (владельца кота)</legend>
-              <p>
-                <label class="program-form__label" for="email">E-mail:*</label>
-                <input class="program-form__input-text" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
-              </p>
-              <p>
-                <label class="program-form__label" for="phone">Телефон:*</label>
-                <input class="program-form__input-text" type="text" name="phone" id="phone" value="88009006090" required>
-              </p>
+              <ul class="program-form__contact-data-list">
+                <li class="program-form__contact">
+                  <label class="program-form__label" for="email">E-mail:*</label>
+                  <input class="program-form__input-text" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+                </li>
+                <li class="program-form__contact">
+                  <label class="program-form__label" for="phone">Телефон:*</label>
+                  <input class="program-form__input-text" type="text" name="phone" id="phone" value="88009006090" required>
+                </li>
+              </ul>
             </fieldset>
           </div>
           <div class="program-form__comment">
@@ -90,21 +92,31 @@
           <div class="program-form__extra-options">
             <fieldset class="program-form__fieldset">
             <legend class="program-form__legend">Дополнительно</legend>
-                <label class="program-form__label">
-                  <input class="program-form__checkbox" type="checkbox" name="sweetener" value="sweetener" checked>Сахарозаменитель
-                </label>
+              <ul class="program-form__extra-option-list">
+                <li class="program-form__extra-option">
+                  <label class="program-form__label">
+                    <input class="program-form__checkbox" type="checkbox" name="sweetener" value="sweetener" checked>Сахарозаменитель
+                  </label>
+                </li>
 
-                <label class="program-form__label">
-                  <input class="program-form__checkbox" type="checkbox" name="water" value="water">Питьевая вода
-                </label>
+                <li class="program-form__extra-option">
+                  <label class="program-form__label">
+                    <input class="program-form__checkbox" type="checkbox" name="water" value="water">Питьевая вода
+                  </label>
+                </li>
 
-                <label class="program-form__label">
-                  <input class="program-form__checkbox" type="checkbox" name="milk" value="milk">Молоко
-                </label>
+                <li class="program-form__extra-option">
+                  <label class="program-form__label">
+                    <input class="program-form__checkbox" type="checkbox" name="milk" value="milk">Молоко
+                  </label>
+                </li>
 
-                <label class="program-form__label">
-                  <input class="program-form__checkbox" type="checkbox" name="vitamins" value="vitamins">Витамины
-                </label>
+                <li class="program-form__extra-option">
+                  <label class="program-form__label">
+                    <input class="program-form__checkbox" type="checkbox" name="vitamins" value="vitamins">Витамины
+                  </label>
+                </li>
+              </ul>
             </fieldset>
           </div>
           <button class="program-form__button-submit" type="submit">Отправить заявку</button>

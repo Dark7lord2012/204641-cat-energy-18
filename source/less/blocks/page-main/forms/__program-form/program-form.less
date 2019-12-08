@@ -59,40 +59,77 @@
   outline: 1px solid aqua;
   display: flex;
   width: 100%;
+}
 
-  .program-form__fieldset {
+.program-form__contact-data-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .program-form__contact {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .program-form__contact {
+      width: 50%;
+    }
+  }
+
+  .program-form__input-text {
     flex-grow: 1;
   }
 }
 
 .program-form__comment {
+  display: flex;
   outline: 1px solid aqua;
+  width: 100%;
+
+  .program-form__fieldset {
+    display: flex;
+  }
+
+  .program-form__text-area {
+    width: 95%; /* Сомнительное место, нужно исправить */
+  }
+}
+
+.program-form__extra-options {
   width: 100%;
 }
 
-
-
-.program-form__extra-options {
-  border: 1px solid #cdcdcd;
+.program-form__extra-option-list {
+  outline: 1px solid magenta;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 100%;
-
-  .program-form__label {
-    outline: 1px solid red;
-  }
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   @media (min-width: @tablet-width) {
-    .program-form__label {
-      width: 50%;
-    }
+    flex-direction: row;
+  }
+}
+
+.program-form__extra-option {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
   }
 
   @media (min-width: @desktop-width) {
-    .program-form__label {
-      width: 25%;
-    }
+    width: 25%;
   }
 }
 
@@ -116,6 +153,10 @@
 
   @media (min-width: @tablet-width) {
     width: 285px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
   }
 }
 
