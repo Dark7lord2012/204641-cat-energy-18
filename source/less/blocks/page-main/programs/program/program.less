@@ -1,29 +1,167 @@
 .program {
   background-color: #f2f2f2;
   font-family: "Oswald", "Arial", sans-serif;
+  min-height: 266px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    min-height: 290px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
+  }
+}
+
+.program--cat-pro {
+  .program__title {
+    margin-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 15px;
+    }
   }
 }
 
 .program__title {
+  position: relative;
   color: #111111;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   font-weight: normal;
   text-align: center;
+  margin-top: 14px;
+  margin-left: 10px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     text-align: left;
     font-size: 36px;
     line-height: 37px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 15px;
     text-align: center;
+    margin-left: 20px;
+    margin-bottom: 67px;
+  }
+}
+
+.program__title::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  left: -8px;
+  top: -6px;
+  background-color: #68b738;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 16px;
+    right: 9px;
+    left: auto;
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: -20px;
+    right: auto;
+  }
+}
+
+.program--cat-slim .program__title::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 49px;
+  left: 0;
+  top: -8px;
+  background-image: url('../img/icon-cat-slim.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    left: auto;
+    right: 39px;
+    width: 141px;
+    height: 194px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -36px;
+    left: -7px;
+    right: auto;
+    width: 71px;
+    height: 97px;
+  }
+}
+
+.program--cat-pro .program__title {
+  margin-left: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 63px;
+  }
+
+  &::before {
+    left: -35px;
+
+    @media (min-width: @tablet-width) {
+      top: 14px;
+      left: auto;
+      right: 7px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -30px;
+      left: -64px;
+      right: auto;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 28px;
+    left: -44px;
+    top: 5px;
+    background-image: url('../img/icon-cat-pro.svg');
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 113px;
+      top: 58px;
+      left: auto;
+      right: -25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 57px;
+      top: -8px;
+      left: -82px;
+      right: auto;
+    }
   }
 }
 
@@ -31,11 +169,33 @@
   color: #444444;
   font-family: "Arial", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 18.5px;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
+    width: 372px;
+    margin: -35px 0 0 -1px;
+    padding-bottom: 0;
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 24px;
+    border-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.program--cat-pro .program__description {
+  @media (min-width: @tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
   }
 }
 
@@ -47,9 +207,44 @@
   color: #111111;
   text-decoration: none;
 
+  &::after {
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 12px;
+    margin-left: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    transition: 0.1s;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 23px;
+      top: -2px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 34px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      transition: 0.05s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-top: -6px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
   }
 }
