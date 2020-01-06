@@ -40,7 +40,7 @@
       </a>
       <button class="page-header__toggle main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <nav class="page-header__main-nav main-nav">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--index">
           <li class="site-list__item site-list__item--active site-list__item--index"><a>Главная</a></li>
           <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item site-list__item--index"><a href="form.html">Подбор программы</a></li>
@@ -169,6 +169,8 @@
       var navToggle = document.querySelector('.page-header__toggle');
 
       pageHeader.classList.remove('page-header--nojs');
+      pageHeader.classList.remove('page-header--opened');
+      pageHeader.classList.add('page-header--closed');
 
       navToggle.addEventListener('click', function() {
         if (pageHeader.classList.contains('page-header--closed')) {

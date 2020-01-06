@@ -3,12 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 25px 20px;
+  min-height: 210px;
+  margin-top: -1px;
+  padding: 0px 20px 25px;
   outline: 1px solid green;
   box-sizing: border-box;
-  margin-bottom: 5px;
-  flex-grow: 0;
-  align-items: center;
+  border-top: 1px solid #ededed;
 
   @media (min-width: @tablet-width) {
     flex-basis: 324px;
@@ -24,7 +24,7 @@
 
 .product__image {
   outline: 1px solid blue;
-  width: 50%;
+
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -42,10 +42,12 @@
 
 .product__title {
   outline: 1px solid blue;
+  margin: 21px 0 15px;
+  padding-right: 50px;
   font-family: "Oswald", "Arial", sans-serif;
-  color: #111111;
   font-size: 16px;
   line-height: 20px;
+  color: #111111;
   text-transform: uppercase;
   font-weight: normal;
 
@@ -63,6 +65,18 @@
   font-size: 12px;
   line-height: 16px;
 
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  td {
+    outline: 1px solid red;
+    margin: 0;
+    padding: 0;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
   }
@@ -70,9 +84,8 @@
 
 .product__link-btn {
   width: 100%;
-  outline: 1px solid blue;
   display: block;
-  padding: 12px 0;
+  padding: 10px 0;
   color: #ffffff;
   background-color: #68b738;
   font-family: "Oswald", "Arial", sans-serif;

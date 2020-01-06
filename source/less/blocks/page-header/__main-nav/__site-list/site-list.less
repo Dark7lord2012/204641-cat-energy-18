@@ -11,6 +11,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    &--index .site-list__item--active{
+      border-bottom: 2px solid #ffffff;
+    }
+  }
 }
 
 .site-list__item {
