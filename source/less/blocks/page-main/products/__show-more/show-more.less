@@ -18,6 +18,8 @@
       transform: translateX(-50%);
       width: 60px;
       height: 60px;
+      background-image: url("../img/icon-plus.svg");
+      opacity: 0.2;
     }
   }
 }
@@ -38,6 +40,10 @@
     line-height: 20px;
     margin-bottom: -15px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 15px;
+  }
 }
 
 .show-more__description {
@@ -52,6 +58,10 @@
     padding: 0 35px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
