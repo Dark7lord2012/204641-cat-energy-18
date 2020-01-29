@@ -27,12 +27,27 @@
   font-weight: normal;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    margin: 42px 37px 65px;
     font-size: 36px;
     line-height: 36px;
+
+    /*Попытка задать декоративные полоски по бокам заголовка*/
+/*    &::before {
+      position: absolute;
+      top: calc(50% + 3px);
+      right: 0;
+      left: 0;
+      height: 3px;
+      widows: 100%;
+      content: "";
+      background-color: #68b738;
+    }*/
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    margin: 72px 0 82px;
   }
 }
 

@@ -22,11 +22,16 @@
   color: #111111;
   font-size: 36px;
   line-height: 60px;
-  margin: 0;
-  margin-bottom: 30px;
+  font-weight: normal;
+  margin: 13px 20px 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
+    margin: 50px 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 68px 0 20px;
   }
 }
 
@@ -34,6 +39,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
 }

@@ -5,14 +5,41 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Каталог товаров Cat Energy</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url("img/preview/cat-energy-catalog-mobile.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          background-position:  50% 0;
+          /* Планшетный макет */
+          background-image: url("img/preview/cat-energy-catalog-tablet.jpg");
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1300px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/preview/cat-energy-catalog-desktop.jpg");
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
 <body>
-  <header class="page-header">
-      <a href="" class="page-header__logo">
+  <header class="page-header page-header--opened page-header--nojs">
+      <a href="index.html" class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo-mobile.svg"
         alt="Логотип Кэт Энерджи"  width="200" height="60">
       </a>
-      <button class="page-header__toggle main-nav__toggle" type="button">Открыть меню</button>
+      <button class="page-header__toggle main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <nav class="page-header__main-nav main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
@@ -31,7 +58,7 @@
         <ul class="products__list">
 
           <li class="products__item product">
-            <img class="product__image" src="img/chicken-big-mobile@1x.jpg"
+            <img class="product__image" src="img/chicken-small-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Pro 500 г.</h3>
@@ -54,7 +81,7 @@
           </li>
 
           <li class="products__item product">
-            <img class="product__image" src="img/chicken-small-mobile@1x.jpg"
+            <img class="product__image" src="img/chicken-big-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Pro 1000 г</h3>
@@ -77,7 +104,7 @@
           </li>
 
           <li class="products__item product">
-            <img class="product__image" src="img/fish-big-mobile@1x.jpg"
+            <img class="product__image" src="img/fish-small-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Pro 500 г</h3>
@@ -100,7 +127,7 @@
           </li>
 
           <li class="products__item product">
-            <img class="product__image" src="img/fish-small-mobile@1x.jpg"
+            <img class="product__image" src="img/fish-big-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Pro 1000 г</h3>
@@ -123,7 +150,7 @@
           </li>
 
           <li class="products__item product">
-            <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg"
+            <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Slim 500 г</h3>
@@ -146,7 +173,7 @@
           </li>
 
           <li class="products__item product">
-            <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg"
+            <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg"
             alt="Питание Cat Energy" width="140" height="144">
             <div class="product__info">
               <h3 class="product__title">Cat Energy Slim 1000 г</h3>
@@ -289,5 +316,24 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var pageHeader = document.querySelector('.page-header');
+      var navToggle = document.querySelector('.page-header__toggle');
+
+      pageHeader.classList.remove('page-header--nojs');
+      pageHeader.classList.remove('page-header--opened');
+      pageHeader.classList.add('page-header--closed');
+
+      navToggle.addEventListener('click', function() {
+        if (pageHeader.classList.contains('page-header--closed')) {
+          pageHeader.classList.remove('page-header--closed');
+          pageHeader.classList.add('page-header--opened');
+        } else {
+          pageHeader.classList.add('page-header--closed');
+          pageHeader.classList.remove('page-header--opened');
+        }
+      });
+    </script>
 </body>
 </html>

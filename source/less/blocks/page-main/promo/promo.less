@@ -1,6 +1,7 @@
 
 .promo {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: @mobile-width;
   box-sizing: border-box;
@@ -25,9 +26,9 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    min-height: 470px;
-    padding: 74px 190px 10px;
-    background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
+    min-height: 575px;
+    padding: 102px 120px 10px;
+    background-color: transparent;
   }
 }
 
@@ -36,12 +37,18 @@
   line-height: 36px;
   font-weight: normal;
   margin-top: 7px;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-bottom: 22px;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin: 0 0 20px;
   }
 }
 
@@ -49,23 +56,36 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
   }
 }
 
 .promo__image {
   margin: 0 auto;
-  margin-bottom: 0;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
     position: relative;
     top: -50px;
     order: 4;
     z-index: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 552px;
+    height: 449px;
+    top: 50px;
+    right: 250px;
   }
 }
 
@@ -81,7 +101,8 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    width: 245px;
+    padding: 16px 0;
     font-size: 20px;
     line-height: 20px;
     z-index: 1;
